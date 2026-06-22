@@ -1,21 +1,19 @@
 class Solution {
     public int maxNumberOfBalloons(String text) {
-        StringBuilder s=new StringBuilder(text);
-        int count=0;
-        StringBuilder st=new StringBuilder("balloon");
-        for(int i=0;i<s.length();i++){
-            String c=String.valueOf(s.charAt(i));
-            int index=st.indexOf(c);
-            if(index>=0){
-                s.deleteCharAt(i);
-                st.deleteCharAt(index);
-                i--;
+        int count=0,b=0,a=0,l=0,o=0,n=0,len=text.length();
+        for(int i=0;i<len;i++){
+            char c=text.charAt(i);
+            switch(c){
+                case 'b' -> b++;
+                case 'a' -> a++;
+                case 'l' -> l++;
+                case 'o' -> o++;
+                case 'n' -> n++;
             }
-            if(st.length()==0){
-                count++;
-                i=-1;
-                st.append("balloon");
-            }
+        }
+        while(b>=1 && a>=1 && l>=2 && o>=2 && n>=1){
+           b--;a--;l-=2;o-=2;n--; 
+            count++;
         }
         return(count);
     }
