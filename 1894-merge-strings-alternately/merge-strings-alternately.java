@@ -1,0 +1,16 @@
+class Solution {
+    public String mergeAlternately(String word1, String word2) {
+        int len1=word1.length(),len2=word2.length(),i=0;
+        StringBuilder st=new StringBuilder();
+        while (i<len1 || i<len2){
+            if(i<len1){
+                st.append(word1.charAt(i));
+            }
+            if(i<len2){
+                st.append(word2.charAt(i));
+            }
+            i++;
+        }
+        return(String.valueOf(st));
+    }
+}
