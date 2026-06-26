@@ -6,7 +6,7 @@ class Solution {
             while(check.length()<s.length()){
                check.append(st);
             }
-            if((String.valueOf(check)).equals(s)){
+            if(check.toString().equals(s)){
                 return true;
             }
         }
