@@ -8,7 +8,7 @@ class Solution {
         for(String w2: word2){
             st2.append(w2);
         }
-        if(st.toString().equals(st2.toString())){
+        if(st.compareTo(st2)==0){
             return true;
         }
         return false;
