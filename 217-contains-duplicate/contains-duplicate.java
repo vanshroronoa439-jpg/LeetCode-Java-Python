@@ -7,9 +7,6 @@ class Solution {
                 return true;
             }
         }
-        if(map.get(nums[nums.length -1])>=2){
-            return true;
-        }
         return false;
     }
 }
