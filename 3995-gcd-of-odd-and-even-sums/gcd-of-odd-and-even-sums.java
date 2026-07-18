@@ -8,8 +8,8 @@ class Solution {
             sumEven +=even;
             even+=2;
         }
-        int min=(int)Math.min(sumOdd,sumEven);
-        int max=(int)Math.max(sumOdd,sumEven);
+        int min=sumOdd;
+        int max=sumEven;
         while(min!=0){
             gcd=max%min;
             max=min;
