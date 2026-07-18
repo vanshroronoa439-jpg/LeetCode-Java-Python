@@ -10,15 +10,11 @@ class Solution {
         }
         int min=(int)Math.min(sumOdd,sumEven);
         int max=(int)Math.max(sumOdd,sumEven);
-        while(max%min!=0){
+        while(min!=0){
             gcd=max%min;
-            if(gcd<min){
-                min=gcd;
-            }
-            else{
-                max=gcd;
-            }
+            max=min;
+            min=gcd;
         }
-        return (gcd);
+        return (max);
     }
 }
